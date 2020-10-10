@@ -14,8 +14,6 @@ def home():
 @app.route('/qrgen', methods=['POST'])
 def qrgen():
     if request.method == "POST":
-        #data = request.get_json()
-        #text = data['text']
         text = request.get_json("text")
         text = text['text']
         print(text)
