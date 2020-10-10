@@ -22,18 +22,6 @@ $(document).ready(function(){
             $("#qr").attr("src", "/static/img/result.png");
             $("#download_link").attr("download", qr_text)
         });
-        
-        /*$.ajax({
-            type: 'POST',
-            contentType: 'application/json',
-            url: '/qrgen',
-            dataType : 'json',
-            data : JSON.stringify(data),
-            success : function(result) {
-                //alert(JSON.stringify(result))
-                $("#qrcode").css({"background-image": "url('/static/img/result.png')"})
-            }
-        });*/
     });
 
 });
