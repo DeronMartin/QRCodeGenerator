@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <script src="/static/js/script.js"></script>
     <link rel="icon" href="/static/img/favicon.ico" type="image/png">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 </head>
 <body>
     <header>
@@ -25,15 +28,15 @@
             <div id="main_left">
                 <div id="input_form_div">
                     <h4 id="input_form_header">Enter your text below</h4>
-                    <input type="text" id="input_text"/>
+                    <input type="text" id="input_text" name="input_text"/>
                     <button id="submit_button">Generate</button>
                 </div>>
             </div><div id="main_right">
                 <div id="qrcode_div">
                     <div id="qrcode">
-                        
+                        <img id="qr" src="/static/img/qr.webp"/>
                     </div>
-                    <button id="download_button">Download</button>
+                    <a id ="download_link" href="/static/img/result.png" download="result"><button id="download_button">Download</button></a>
                 </div>
             </div>
         </div>

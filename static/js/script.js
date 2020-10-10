@@ -13,4 +13,27 @@ $(document).ready(function(){
         $("#qrcode").width(qr_height);
     }
 
+    //Submit Text
+    $("#submit_button").click(function() {
+        var qr_text = document.getElementById("input_text").value;
+        var data = {"text": qr_text};
+        $.post("/qrgen", JSON.stringify({"text": qr_text}), function(resp){
+            $("#qr").attr("src", "/static/img/qr.webp");
+            $("#qr").attr("src", "/static/img/result.png");
+            $("#download_link").attr("download", qr_text)
+        });
+        
+        /*$.ajax({
+            type: 'POST',
+            contentType: 'application/json',
+            url: '/qrgen',
+            dataType : 'json',
+            data : JSON.stringify(data),
+            success : function(result) {
+                //alert(JSON.stringify(result))
+                $("#qrcode").css({"background-image": "url('/static/img/result.png')"})
+            }
+        });*/
+    });
+
 });
